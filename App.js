@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Switch, Text, View } from 'react-native';
 import Button from './src/components/Button';
+import Keyboard from './src/components/Keyboard';
 import { ThemeContext } from './src/context/ThemeContext';
 import { colors } from './src/styles/Colors';
 
@@ -12,10 +13,11 @@ export default function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <View style={theme == 'light' ?styles.container : [styles.container, {backgroundColor:'black'}]}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-        <Switch value={theme == 'light'} onValueChange={()=>setTheme(theme == 'light' ? 'dark' : 'light')} />
-        <Button title={"1"} onPress={()=>alert('hye')} />
+      <StatusBar style="auto" />
+        <Switch trackColor={{ false: "#767577", true: "#81b0ff" }}
+        thumbColor={theme == 'light' ? "#f5dd4b" : "#f4f3f4"}
+        ios_backgroundColor="#3e3e3e" value={theme == 'light'} onValueChange={()=>setTheme(theme == 'light' ? 'dark' : 'light')} />
+       <Keyboard />
       </View>
     </ThemeContext.Provider>
   );
