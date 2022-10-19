@@ -1,19 +1,22 @@
 import { StyleSheet } from "react-native";
 import { colors } from "./Colors";
 
+let btnHeightWidth = 72;
+
 export const Styles = StyleSheet.create({
     btnBlue: {
-        width: 72,
-        height: 72,
+        width: btnHeightWidth,
+        height: btnHeightWidth,
         borderRadius: 24,
         backgroundColor: colors.blue,
         justifyContent: "center",
         alignItems: "center",
         margin: 8,
+       
     },
     btnDark: {
-        width: 72,
-        height: 72,
+        width: btnHeightWidth,
+        height: btnHeightWidth,
         borderRadius: 24,
         backgroundColor: colors.btnDark,
         justifyContent: "center",
@@ -21,8 +24,8 @@ export const Styles = StyleSheet.create({
         margin: 8,
     },
     btnLight: {
-        width: 72,
-        height: 72,
+        width: btnHeightWidth,
+        height: btnHeightWidth,
         borderRadius: 24,
         backgroundColor: colors.white,
         justifyContent: "center",
@@ -30,8 +33,8 @@ export const Styles = StyleSheet.create({
         margin: 8,
     },
     btnGray: {
-        width: 72,
-        height: 72,
+        width: btnHeightWidth,
+        height: btnHeightWidth,
         borderRadius: 24,
         backgroundColor: colors.btnGray,
         justifyContent: "center",
@@ -47,7 +50,6 @@ export const Styles = StyleSheet.create({
         color: colors.black,
     },
 
-    
     // Keyboard
     row: {
         maxWidth: '100%',
